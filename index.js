@@ -5,19 +5,6 @@ const submitFormButton = document.querySelector('form button');
 const userInputs = document.querySelectorAll('input');
 const deleteButton = document.querySelector('.delete-button');
 
-// window.onload = function () {
-//   const deleteButton = document.querySelector('.delete-button');
-//   const updateButton = document.querySelector('.update-button');
-
-//   const deleteButtonClickHandler = (event) => {
-//     console.log(event);
-//   };
-//   deleteButton.setAttribute('onclick', deleteButtonClickHandler);
-//   deleteButton.addEventListener('click', (event) => console.log(event));
-//   //   deleteButton.addEventListener('click');
-//   updateButton.addEventListener('click', (event) => console.log(event));
-// };
-
 const data = [
   {
     full_name: 'Janes Doe',
@@ -91,34 +78,8 @@ const appendDataToTable = (fullName, email, age) => {
 
   newTdElement.append(updateButtonElement);
   newTrElement.append(newTdElement);
-
-  // newTrElement.addEventListener('click', deleteElement.bind(null, email));
-  // document
-  //   .querySelector('.delete-button')
-  //   .addEventListener('click', deleteElement.bind(null, email));
-
   tbodyElement.append(newTrElement);
 };
-
-// const appendDataToTable = (fullName, email, age) => {
-//   const newTrElement = document.createElement('tr');
-//   newTrElement.innerHTML = `
-//     <td>${fullName}</td>
-//     <td>${email}</td>
-//     <td>${age}</td>
-//     <td>
-//      <button class="delete-button">Delete</button>
-//     <button class="update-button">Update</button>
-//     </td>
-//     `;
-
-//   // newTrElement.addEventListener('click', deleteElement.bind(null, email));
-//   document
-//     .querySelector('.delete-button')
-//     .addEventListener('click', deleteElement.bind(null, email));
-
-//   tbodyElement.append(newTrElement);
-// };
 
 const forConcat = {
   full_name: 'Janes Doe',
@@ -163,18 +124,3 @@ submitFormButtonHandler = (event) => {
 submitFormButton.addEventListener('click', () =>
   submitFormButtonHandler(event)
 );
-
-// let deleteArr = [...document.getElementsByClassName('delete-button')];
-// deleteArr.forEach((item, index) => {
-//   item.addEventListener('click', () => {
-//     data.splice(index, 1);
-//     tbodyElement.removeChild(tbodyElement.children[index]);
-//   });
-// });
-
-// let updateArr = [...document.getElementsByClassName('update-button')];
-// updateArr.forEach((item, index) => {
-//   item.addEventListener('click', () => console.log(index));
-// });
-
-// deleteData();
